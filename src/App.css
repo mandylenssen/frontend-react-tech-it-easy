@@ -105,7 +105,7 @@ main {
     max-width: 250px;
 }
 
-.all-tvs {
+.button-section {
     display: flex;
     flex-direction: row;
     gap: 7px;

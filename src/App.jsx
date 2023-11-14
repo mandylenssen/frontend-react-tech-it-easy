@@ -11,6 +11,19 @@ import minus from "./assets/minus.png"
 
 
 function App() {
+
+    function mostSoldFirst() {
+        console.log("Meest verkocht eerst")
+    }
+
+    function cheapestFirst() {
+        console.log("Goedkoopste eerst")
+    }
+
+    function mostSuitedForSport() {
+        console.log("Meest geschikt voor sport eerst")
+    }
+
     return (
         <main>
             <h1>Tech it easy dashboard</h1>
@@ -51,15 +64,12 @@ function App() {
                 </div>
             </section>
 
-            <section>
+            <section className="all-tvs">
                 <h2>Alle tvs</h2>
-                <div className="all-tvs">
-
-
-                     {/*ik ben er helaas nog niet aan toegekomen de buttons werkend te maken */}
-                    <button type="button">Meest verkocht eerst</button>
-                    <button type="button">Goedkoopste eerst</button>
-                    <button type="button">Meest geschikt voor sport eerst</button>
+                <div className="button-section">
+                    <button type={"button"} onClick={mostSoldFirst}>Meest verkocht eerst</button>
+                    <button type={"button"} onClick={cheapestFirst}>Goedkoopste eerst</button>
+                    <button type={"button"} onClick={mostSuitedForSport}>Meest geschikt voor sport eerst</button>
                 </div>
             </section>
         </main>
