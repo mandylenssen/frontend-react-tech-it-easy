@@ -55,17 +55,28 @@ main {
 .best-product-panel {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     color: black;
     max-width: 1000px;
     background-color: #EDEDED;
     border: 1px dashed black;
     border-radius: 5px;
-    padding: 15px 30px;
-    gap: 26px;
+    padding: 15px 40px;
+    gap: 45px;
 }
 
+.product-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    max-width: 1000px;
+    padding: 15px 40px;
+    gap: 45px;
+    margin: 40px 0;
+}
 .sales-overview-section {
     display: flex;
     flex-direction: row;
@@ -101,8 +112,8 @@ main {
     margin-right: 3px;
 }
 
-.tvImage {
-    max-width: 250px;
+.tv-image {
+   max-width: 200px;
 }
 
 .button-section {
