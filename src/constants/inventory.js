@@ -121,7 +121,7 @@ export let inventory = [
         screenQuality: 'Ultra HD/4K',
         smartTv: true,
         sourceImg: 'https://media.s-bol.com/B9n73k76VG2N/vQYEKNn/1200x734.jpg',
-        options:     [
+        options: [
             {
                 name: "wifi",
                 applicable: true,
@@ -157,7 +157,7 @@ export let inventory = [
         screenQuality: 'Ultra HD/4K',
         sourceImg: 'https://media.s-bol.com/ROVXLp4q9joq/1200x751.jpg',
         smartTv: true,
-        options:     [
+        options: [
             {
                 name: "wifi",
                 applicable: true,
@@ -328,4 +328,87 @@ export let inventory = [
     },
 ];
 
+// Opdracht 1a
+
+const mapMethod = inventory.map((tvType) => {
+    return tvType.type;
+});
+console.log(mapMethod);
+
+console.log("---------------");
+
+
+// Opdracht 1b
+
+const filterMethod = inventory.filter((soldTv) => {
+    return soldTv.originalStock === soldTv.sold;
+});
+console.log(filterMethod);
+
+console.log("---------------");
+
+
+// Opdracht 1c
+
+const findMethod = inventory.find((smartTv) => {
+    return smartTv.type === "NH3216SMART";
+});
+console.log(findMethod);
+
+console.log("---------------");
+
+
+// Opdracht 1d
+
+const suiteableTvs = inventory.map((tv) => {
+    return "name: " + tv.brand + tv.name + ", suitable: " + (tv.refreshRate >= 100);
+});
+console.log(suiteableTvs);
+
+console.log("---------------");
+
+
+// opdracht 1e
+
+const screenSize = inventory.filter((tv) => {
+
+    const bigSizes = tv.availableSizes.filter((sizes) => {
+        return sizes >= 65;
+    });
+    return bigSizes.length > 0;
+});
+console.log(screenSize);
+
+console.log("---------------");
+
+
+// opdracht 1f
+
+// const ambiLight = inventory.filter((tv) => {
+//
+//     const ambiLightAvailable = tv.options.filter((option) => {
+//         if (option.name === "ambiLight") {
+//             if (option.applicable === true) {
+//                 return true;
+//             }
+//         }
+//         return false;
+//     });
+//     return ambiLightAvailable.length > 0; });
+//     console.log(ambiLight);
+//
+//     console.log("---------------");
+
+const ambilightTvs = inventory.filter((tv) => {
+
+    const ambilightOption = tv.options.find((option) => {
+        return option.name === "ambiLight";
+    })
+
+    return ambilightOption.applicable;
+});
+
+console.log(ambilightTvs);
+
+console.log("---------------");
 
